@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet"> 
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Systematic Analysis of testing-related publications concerning reprocucibility and comparability</h1>
+					<br><br>
+					<h3>Bachelor's Thesis Defense by Artur Solomonik</h3>
+					<h4>Referees: Prof. Dr. Norbert Siegmund, Prof. Dr. Martin Potthast</h4>
+				</section>
+				<section>
+					<section>
+						<h2>Software Testing</h2>
+					</section>
+					<section> 
+						<h3>Software Testing Life Cycle</h3><br>
+						<div style="position:relative; width:640px; height:480px; margin:0 auto;">
+							<img class="fragment current-visible" style="position:absolute;top:0;left:0;" src="testing-life-cycle.png">
+							<img class="fragment current-visible" style="position:absolute;top:0;left:0;" src="testing-life-cycle-add1.png">
+							<img class="fragment current-visible" style="position:absolute;top:0;left:0;" src="testing-life-cycle-add2.png">
+						</div>
+					</section>
+					<section>
+						<h4>Software Testing Research</h4><br>
+							<ul>
+								<li>Generating test suites</li>
+								<ul>
+									<li>Exploration pinciples</li>
+									<li>Mutation testing</li>
+									<li>Executing generated test suites</li>
+									<li>Prioritization and Reduction of Test Cases</li>
+								</ul>
+								<li>Automating test case creation, selection and execution</li>
+								<li>Finding new approaches on organizing testing processes</li>
+								<ul>
+									<li>Testing Workflow</li>
+									<li>Decision Making Process</li>
+									<li><em>When and What to Automate?</em></li>
+								</ul>
+							</ul>
+
+					</section>
+					<section>
+						<h4>Software Testing Research</h4><br>
+						<ul>
+							<li>Testing Levels</li>
+							<ul>
+								<ul>
+									<li>Data-Flow Testing, Static Code Analysis | <strong>Unit Testing</strong></li>
+									<li>Backbone-, Client-Server-, Bottom-Up | <strong>Integration Testing</strong></li>
+									<li>GUI Testing, End-To-End Testing | <strong>System Testing</strong></li>
+									<li>Reliability and Stability, Chaos Testing | <strong>Acceptance Testing</strong></li>
+								</ul>
+							</ul>
+							<li>Execution Paradigms</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Test Execution Paradigms</h4><br>
+						<img src="paradigms.png">
+					</section>
+					<section>
+						<h2>How do we know the testing system is working?</h2><br>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Empirical Software Evaluations</h2>
+					</section>
+					<section>
+						<h3>Evaluating result data</h3><br>
+						<ul>
+							<li>Present the result data set and identify significant values</li>
+							<li>Connect hypotheses and results</li>
+							<li>Compare related work and their findings</li>
+							<li>Argument the improvement or benefits of the approach</li>
+							<li>Apply suitable metrics</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Reproducibility</h3> <br>
+						<strong>Goal:</strong> Provide the reader with every information and resource necessary to recreate the findings presented in the paper
+						<img src="reproducibility.png">
+					</section>
+					<section>
+						<h3>Reproducibility Attributes</h3>  <br>
+						<ul>
+							<li>Reproduction score influenced by data set attributes</li>
+							<ul>
+								<li class="fragment highlight-blue" data-fragment-index="1"><strong>Identification:</strong> Explanation of where the data is and what it is called</li>
+								<li class="fragment highlight-blue" data-fragment-index="1"><strong>Description:</strong> Level of the of the explanation regarding the element</li>
+								<li class="fragment highlight-blue" data-fragment-index="1"><strong>Availability:</strong> Ease of accessing or obtaining the research elements</li>
+								<li><strong>Persistence:</strong> Confidence in future state and availability of the elements</li>
+								<li><strong>Flexibility:</strong> Adaptability of the elements to new environments</li>
+							</ul>
+							<li class="fragment current-visible" data-fragment-index="2">Varying data sources - Attributes not applicable to anything</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Comparability</h3><br>
+						<strong>Goal:</strong> Assess papers on whether empirical comparisons in the evaluation are appropriate or existent.<br><br>
+						<ul>
+							<li>Criteria for comprehensible evaluations</li>
+							<li>Strategies of Comparison</li>
+							<li>Connectivity to related work</li>
+						</ul>
+					</section>
+					<section>
+						<h2>How can we understand the research strategies of software testing publications in terms of reproducibility and comparability?</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Bibliographic networks</h2>
+					</section>
+					<section>
+						<h3>Data Source</h3><br>
+						<ul>
+							<li>Papers from 10 popular software engineering conferences (ASE, ICSE, ISSTA, ...)</li>
+							<li>Additional publications from two journals (ESE, TOSEM)</li>
+							<li>Frequently mentioned publications</li>
+							<li>Papers from modification / refinement phases</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Processed Data Set</h3><br>
+						<img src="data-extraction.png">
+					</section>
+					<section data-background-iframe="https://docs.google.com/spreadsheets/d/1CI2MTmAbCTllJPBuCV4Rfk4Kvn2dEaR-JeehCLbteh0/edit?usp=sharing" data-background-interactive>
+					<div class="fragment" style="position: absolute; width: 40%; right: 200px; top: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 18px; text-align: left;">
+						<b>Raw Data Set</b>
+						<p>Spreadsheet with <strong>8060</strong> registered papers of which <strong>360</strong> are classified by <strong>23</strong> columns</p>
+						<p><strong>205</strong> documented benchmarks</p>
+						<p>Over <strong>15000</strong> bibliographic and semantic connections between records</p>
+					</div>
+					</section>
+					<section>
+						<table class="tg">
+  <tr>
+    <th class="tg-s268">Classification</th>
+    <th class="tg-s268">Parameters<br></th>
+  </tr>
+  <tr>
+    <td class="tg-s268">Availability</td>
+    <td class="tg-s268"><br>[open/closed]</td>
+  </tr>
+  <tr>
+    <td class="tg-s268">Error Creation</td>
+    <td class="tg-s268">[generation/real world/both]</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Metrics</td>
+    <td class="tg-0lax">[ ] Metrics<br></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Error Annotation</td>
+    <td class="tg-0lax">[TRUE/FALSE]</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Data Set State</td>
+    <td class="tg-0lax">[vanilla/modified]</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Selection Cause</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Modification Cause</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Sub-Check Systems</td>
+    <td class="tg-0lax">[single/multiple] [named/unnamed]</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Choice of Metric</td>
+    <td class="tg-0lax">[functionality/performance/both]</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Comparison</td>
+    <td class="tg-0lax">[TRUE/FALSE] [former/foreign/parallel] [exclusive/inclusive]</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Visualizing bibliographic networks</h2>
+					</section>
+					<section data-background-iframe="http://webislab10.medien.uni-weimar.de/" data-background-interactive>
+					<div class="fragment" style="position: absolute; width: 20%; right: 200px; top: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 18px; text-align: left;">
+						<b>TeLO-S</b>
+						<p>D3 visualization of testing publications in a node-link force-directed graph</p>
+					</div>
+					<div class="fragment" style="position: absolute; width: 25%; left: 0; bottom: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: white; padding: 20px; font-size: 12px; text-align: left;">
+						<b>Cypher Query Input and Configuration</b>
+						<p>Selecting sepecific nodes from the Neo4J graph data base and manipulating the layout and color-coding</p>
+					</div>
+					<div class="fragment" style="position: absolute; width: 15%; right: 0; bottom: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: white; padding: 20px; font-size: 12px; text-align: left;">
+						<b>Contribution Plot</b>
+						<p>Immediate assessement of proportions of contribution representatives</p>
+					</div>
+					<div class="fragment" style="position: absolute; width: 30%; right: 300px; top: 250px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: white; padding: 20px; font-size: 12px; text-align: left;">
+						<b>Node analysis</b>
+						<p>Additional information on a selected node concerning his references</p>
+					</div>
+				</section>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
